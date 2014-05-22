@@ -83,9 +83,16 @@
 <section id="results" class="content-section text-center">
   <div class="results-section">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-6 ">
+        <h2>Original</h2>
+        <blockquote class="text-left  max-height-500">
+          <pre>
+            [[raw]]
+          </pre>
+        </blockquote>
+      </div>
+      <div class="col-lg-6">
         <h2>Results</h2>
-
         <div class="panel-group" id="accordion">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -100,67 +107,100 @@
                 <blockquote>
                   <i>Look for a group which quite neatly sums up the mood of the poem.</i>
                 </blockquote>
-                <ul class="list-unstyled">
-                  <li ng-repeat="word in reverse_alphabetical">
-                    [[word]]
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  Alphabetical List
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <blockquote>
-                  <i>
-                  Look for significant variations in usage between poets,
-                  between a poet's various works and, most revealingly, within particular poems.
-                  </i>
-                </blockquote>
-                <ul class="list-unstyled">
-                  <li ng-repeat="word in words">
-                    [[word]]
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                  Group by length
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-              <div class="panel-body">
-                <blockquote>
-                  <i>
-                  Look for significant variations in usage between poets,
-                  between a poet's various works and, most revealingly, within particular poems.
-                  </i>
-                </blockquote>
-                <ul class="list-unstyled">
-                  <li ng-repeat="word in words_by_length">
-                    [[word]]
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+                <!-- <span ng-repeat="word in reverse_alphabetical">[[word]]  --></span>
+<ul class="list-unstyled">
+  <li ng-repeat="word in reverse_alphabetical">
+    [[word]]
+  </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        Alphabetical List
+      </a>
+    </h4>
+  </div>
+  <div id="collapseTwo" class="panel-collapse collapse">
+    <div class="panel-body">
+      <blockquote>
+        <i>
+          Look for significant variations in usage between poets,
+          between a poet's various works and, most revealingly, within particular poems.
+        </i>
+      </blockquote>
+      <ul class="list-unstyled">
+        <li ng-repeat="word in words">
+          [[word]]
+        </li>
+      </ul>
     </div>
   </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        Group by length
+      </a>
+    </h4>
+  </div>
+  <div id="collapseThree" class="panel-collapse collapse">
+    <div class="panel-body">
+      <blockquote>
+        <i>
+          Look for significant variations in usage between poets,
+          between a poet's various works and, most revealingly, within particular poems.
+        </i>
+      </blockquote>
+      <ul class="list-unstyled">
+        <li ng-repeat="word in words_by_length">
+          [[word]]
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+        Parts of Speech
+      </a>
+    </h4>
+  </div>
+  <div id="collapseFour" class="panel-collapse collapse">
+    <div class="panel-body">
+      <blockquote>
+        <i>
+          Some helpful text explaining why this might be interesting please...
+        </i>
+      </blockquote>
+      <ul class="list-unstyled">
+        <li ng-repeat="part in pos_tagged">
+          <b>[[part.definition]]</b>
+          <ul class="list-unstyled">
+            <li ng-repeat="word in part.words">
+              [[word]]
+            </li>
+          </ul>
+          <br />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
 </section>
 
 
