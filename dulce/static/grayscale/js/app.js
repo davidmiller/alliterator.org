@@ -58,7 +58,7 @@ dulceApp.controller('AnalyseCtrl', function($scope, $http) {
         var prepared = _.map(raw.split(/(\n| )/), function(w){
             return w.replace("\n", "")
                 .replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"")
-                .toLowerCase()
+                .toLowerCase().trim()
         }).sort();
         $scope.words = _.union(prepared);
 
